@@ -1,0 +1,18 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Item Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="legacy">
+    <mat-label>Item Cost</mat-label>
+    <input matInput type="number" formControlName="cost" required>
+    <mat-error *ngIf="this.form.get('cost')?.value == 0">Needs to be greater than 0.01</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!this.form.valid">Add</button>
+
+</form>
+
+
