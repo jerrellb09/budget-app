@@ -12,7 +12,6 @@ import { MatLegacyDialogModule as MatDialogModule } from "@angular/material/lega
 import { MatLegacyFormFieldModule as MatFormFieldModule } from "@angular/material/legacy-form-field";
 import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
 import { MatLegacySliderModule as MatSliderModule } from '@angular/material/legacy-slider';
-
 import { AddRecordComponent } from './components/add-record/add-record.component';
 
 
@@ -20,6 +19,7 @@ import { AddRecordComponent } from './components/add-record/add-record.component
 @NgModule({
   declarations: [
     AddRecordComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
