@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BudgetContainerComponent } from '../../components/budget-container/budget-container.component';
+import { BudgetFormComponent } from '../../components/budget-form/budget-form.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'start' },
-  { path: 'start', component: BudgetContainerComponent,
+  { path: '', component: BudgetFormComponent},
+  //{ path: 'start', component: BudgetFormComponent,
     // children:
     // [
     //   { path: '', redirectTo: '1'},
     //   { path: '1', component: BudgetFormComponent}
     // ]
-  }
+  //}
 ];
 
 @NgModule({
