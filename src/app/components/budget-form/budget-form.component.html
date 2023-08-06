@@ -1,1 +1,38 @@
-<p>budget-form works!</p>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Paid To Column -->
+  <ng-container matColumnDef="paidTo">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid To </th>
+    <td mat-cell *matCellDef="let element"> {{element.paidTo}} </td>
+  </ng-container>
+
+  <!-- Amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <!-- Payment Frequency Column -->
+  <ng-container matColumnDef="paymentFrequency">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Payment Frequency </th>
+    <td mat-cell *matCellDef="let element"> {{element.paymentFrequency}} </td>
+  </ng-container>
+
+  <!-- Date Due Column -->
+  <ng-container matColumnDef="dateDue">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Due </th>
+    <td mat-cell *matCellDef="let element"> {{element.dateDue}} </td>
+  </ng-container>
+
+    <!-- Banking Institution Column -->
+  <ng-container matColumnDef="bankingInstitution">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Banking Institution </th>
+    <td mat-cell *matCellDef="let element"> {{element.bankingInstitution}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
